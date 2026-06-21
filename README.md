@@ -1,6 +1,6 @@
 # Windows Sandbox `.wsb` HostFolder NTLM Leak
 
-Following up on my [UNCanny](https://github.com/0xHossam/UnCanny) project, I saw a lot of interest in UNC-based coercion primitives, even with the limitations that project had. This time I wanted to publish something more decent and practical for your ops.
+Following up on my [UNCanny](https://github.com/0xHossam/UnCanny) project, I saw a lot of interest in UNC-based coercion primitives, even with the limitations that project had. This time I wanted to publish something more decent for intial access operations
 
 Windows Sandbox is usually treated as the safe place to open untrusted things. That makes the configuration file itself an interesting attack surface: before the guest environment exists, the host has to parse the `.wsb` file and prepare the sandbox session.
 
