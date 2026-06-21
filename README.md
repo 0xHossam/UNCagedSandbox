@@ -1,6 +1,6 @@
 # Windows Sandbox `.wsb` HostFolder NTLM Leak
 
-Following up on my UNCanny project, I noticed people were interested in that specific UNC-based coercion primitive, even though that project had some clear limitations. So I kept digging around the same idea and wanted to publish something a bit more decent and more practical more practical for initial access.
+Following up on my [UNCanny](https://github.com/0xHossam/UnCanny) project, I noticed people were interested in that specific UNC-based coercion primitive, even though that project had some clear limitations. So I kept digging around the same idea and wanted to publish something a bit more decent and more practical more practical for initial access.
 
 Windows Sandbox is usually treated as the safe place to open untrusted files, which makes the .wsb config file itself an interesting place to look. Before the sandbox guest is even running, the host still has to parse the config file and prepare the sandbox session and while looking at that setup flow, I focused on MappedFolders. The normal documented use case is simple, we map a local host folder into the sandbox. So the remaining obvious question was simply what happens if HostFolder is not a local path, but a UNC path instead?
 
